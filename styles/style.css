@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
 body {
   background: #ccc;
   color: #000;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 400; }
+  body a {
+    color: #000 !important;
+    text-decoration: none !important; }
 
 #container {
   max-width: 1440px;
@@ -23,9 +26,7 @@ body {
       #container header .left-nav li {
         padding: 9px 15px; }
         #container header .left-nav li a {
-          color: #000;
-          text-transform: uppercase;
-          text-decoration: none; }
+          text-transform: uppercase; }
           #container header .left-nav li a:hover {
             font-weight: 600; }
     #container header .right-nav {
@@ -55,3 +56,35 @@ body {
             text-transform: uppercase; }
           #container header .right-nav li .currency .arrow {
             margin-right: 12px; }
+  #container #benefits {
+    background: #F2F2F2; }
+    #container #benefits nav {
+      padding: 10px 39px; }
+      #container #benefits nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center; }
+        #container #benefits nav ul li a {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center; }
+          #container #benefits nav ul li a img {
+            margin-right: 15px; }
+          #container #benefits nav ul li a span {
+            font-size: 12px; }
+  #container #hero {
+    height: 650px;
+    background: #EDE9DD; }
+  #container #site-wide-deals ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
+    #container #site-wide-deals ul li h1 {
+      font-size: 32px;
+      font-weight: 600; }
+      #container #site-wide-deals ul li h1::after {
+        content: 'off';
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase; }
