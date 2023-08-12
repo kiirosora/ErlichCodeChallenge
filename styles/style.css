@@ -5,9 +5,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 400; }
+  body * {
+    box-sizing: border-box; }
   body a {
     color: #000 !important;
     text-decoration: none !important; }
+  body input, body textarea, body button {
+    font-family: inherit; }
 
 #container {
   max-width: 1440px;
@@ -76,15 +80,180 @@ body {
   #container #hero {
     height: 650px;
     background: #EDE9DD; }
-  #container #site-wide-deals ul {
+  #container #site-wide-deals {
+    padding: 45px 69px; }
+    #container #site-wide-deals ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between; }
+      #container #site-wide-deals ul li {
+        width: 160px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center; }
+        #container #site-wide-deals ul li:last-child {
+          width: auto; }
+        #container #site-wide-deals ul li h1 {
+          flex: 0 0 69px;
+          text-align: center;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 40px; }
+        #container #site-wide-deals ul li sub {
+          font-size: 18px;
+          font-weight: 800;
+          text-transform: uppercase; }
+        #container #site-wide-deals ul li small {
+          display: inline-block;
+          flex: 0 0 100%;
+          text-align: center;
+          font-size: 10px;
+          line-height: 20px;
+          text-transform: uppercase; }
+        #container #site-wide-deals ul li button {
+          padding: 10px 20px;
+          border: none;
+          background: #000;
+          color: #fff;
+          white-space: nowrap;
+          font-size: 18px;
+          font-weight: 600;
+          text-transform: uppercase; }
+  #container #vip-exclusive {
+    padding: 0 69px 0 118px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between; }
-    #container #site-wide-deals ul li h1 {
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 13.54%, #000 40.1%, #000 100%), #000 url("../images/vip-exclusive-bg.jfif") no-repeat -244px 0;
+    color: #fff; }
+    #container #vip-exclusive h1 {
+      margin-right: 24px;
+      flex: 1 0 auto;
       font-size: 32px;
-      font-weight: 600; }
-      #container #site-wide-deals ul li h1::after {
-        content: 'off';
+      font-weight: 800;
+      line-height: 75px;
+      text-transform: uppercase; }
+    #container #vip-exclusive h2 {
+      flex: 1 0 354px;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase; }
+    #container #vip-exclusive > div {
+      flex: 0 0 363px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+      #container #vip-exclusive > div button {
+        padding: 10px 20px;
+        border: none;
+        background: #fff;
+        color: #000;
         font-size: 18px;
-        font-weight: 800;
+        font-weight: 600;
         text-transform: uppercase; }
+  #container #trending {
+    padding: 40px 190px 62px;
+    background: #fff; }
+    #container #trending h1 {
+      padding: 10px 20px 20px;
+      font-size: 36px;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center; }
+    #container #trending p {
+      padding: 10px 20px 20px;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center; }
+    #container #trending ul.gallery {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center; }
+      #container #trending ul.gallery li {
+        padding: 20px;
+        flex: 0 0 265px; }
+        #container #trending ul.gallery li figure img {
+          max-width: 100%; }
+        #container #trending ul.gallery li figure figcaption {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 50px;
+          text-align: center;
+          text-transform: uppercase; }
+    #container #trending #hashtags {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; }
+      #container #trending #hashtags button {
+        padding: 10px 20px;
+        border: 1px solid #000;
+        border-radius: 50px;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer; }
+        #container #trending #hashtags button::before {
+          content: '#'; }
+  #container #new-in {
+    padding: 47px 148px 49px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    background: url(../images/new-in-model2.png) no-repeat 442px 0/377px 566px, url(../images/new-in-model1.png) no-repeat 101px 0/449px 674px, linear-gradient(90deg, rgba(255, 203, 124, 0) 0%, #FFCB7C 100%), #fff url(../images/new-in-bg.jfif) no-repeat 50%/cover;
+    background-blend-mode: normal, normal, multiply, normal;
+    color: #fff; }
+    #container #new-in > div {
+      max-width: 50%;
+      padding-left: 79px; }
+      #container #new-in > div h1 {
+        font-size: 86px;
+        font-weight: 800;
+        line-height: 86px;
+        text-transform: uppercase; }
+      #container #new-in > div h2 {
+        margin-top: 21px;
+        font-size: 28px;
+        font-weight: 600; }
+      #container #new-in > div div {
+        margin-top: 41px; }
+        #container #new-in > div div button {
+          padding: 10px 20px;
+          border: none;
+          background: #fff;
+          color: #000;
+          font-size: 18px;
+          font-weight: 600;
+          text-transform: uppercase; }
+  #container #recently-bought {
+    padding: 40px 40px 51px;
+    background: #fff; }
+    #container #recently-bought h1 {
+      padding: 10px 20px 20px;
+      font-size: 36px;
+      font-weight: 800;
+      text-align: center; }
+    #container #recently-bought ul.gallery {
+      display: flex;
+      flex-flow: row nowrap; }
+      #container #recently-bought ul.gallery li {
+        padding: 20px; }
+        #container #recently-bought ul.gallery li figure img {
+          max-width: 100%; }
+        #container #recently-bought ul.gallery li figure figcaption {
+          min-height: 50px;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: capitalize; }
+        #container #recently-bought ul.gallery li figure em {
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: capitalize; }
