@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$text-color: #000;
+
+body {
+    background: #ccc;
+    color: $text-color;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: transparent;
+
+    header {
+        padding: 0 23px 0 24px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+
+        .left-nav {
+            display: flex;
+            flex-flow: row nowrap;
+
+            li {
+                padding: 9px 15px;
+
+                a {
+                    color: $text-color;
+                    text-transform: uppercase;
+                    text-decoration: none;
+
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .right-nav {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            li {
+                margin: 0 10px;
+
+                &:last-child {
+                    margin: 0 0 0 10px;
+                }
+
+                a {
+                    display: inline-block;
+                }
+
+                .currency {
+                    padding: 0px;
+                    margin: 17px 0 16px;
+                    border-radius: 35px;
+                    border: 1px solid #F2F2F2;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    background: #fff;
+                    cursor: pointer;
+
+                    .flag {
+                        margin: 5px 3px 5px 6px;
+                    }
+
+                    .currency-text {
+                        margin-right: 10px;
+                        text-transform: uppercase;
+                    }
+
+                    .arrow {
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
