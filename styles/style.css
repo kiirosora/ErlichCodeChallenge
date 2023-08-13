@@ -98,9 +98,59 @@ body {
             margin-right: 15px; }
           #container #benefits nav ul li a span {
             font-size: 12px; }
-  #container #hero {
+  #container #hero .slide {
     height: 650px;
-    background: #EDE9DD; }
+    padding: 35px 80px 49px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    background: #EDE9DD;
+    /*linear-gradient(270deg, rgba(237, 233, 221, 0.5) 0px, #EDE9DD 400px, #EDE9DD 500px, rgba(237, 233, 221, 0.0) 100%),
+                url(../images/hero1-model.jfif) no-repeat -30px -123px / 916px 1221px,
+                linear-gradient(90deg, #EDE9DD 50%, rgba(237, 233, 221, 0.75) 100%),
+                #EDE9DD url(../images/new-in-bg.jfif) no-repeat 565px -1151px / 904px 2159px;
+            background-blend-mode: normal, normal, overlay, normal;*/
+    /*
+            background:
+                
+                //linear-gradient(90deg, #EDE9DD 50%, rgba(237, 233, 221, 0.75) 100%),
+                //#EDE9DD url(../images/new-in-bg.jfif) no-repeat 565px -1151px / 904px 2159px;
+            // mask-image: linear-gradient(90deg, #000 46%, rgba(0, 0, 0, 0.00) 50%);
+            mask-image: linear-gradient(black, transparent);*/
+    color: #fff; }
+    #container #hero .slide #hero1-bg {
+      width: 904px;
+      height: 2159px;
+      position: absolute;
+      left: 565px;
+      top: -1151px;
+      mask-image: linear-gradient(270deg, #000 73.96%, rgba(0, 0, 0, 0) 100%);
+      -webkit-mask-image: linear-gradient(270deg, #000 73.96%, rgba(0, 0, 0, 0) 100%);
+      mix-blend-mode: overlay; }
+    #container #hero .slide #hero1-model {
+      width: 916px;
+      height: 1221px;
+      position: absolute;
+      left: -30px;
+      top: -123px;
+      mask-image: linear-gradient(90deg, #EDE9DD 91.67%, rgba(237, 233, 221, 0) 100%);
+      -webkit-mask-image: linear-gradient(90deg, #EDE9DD 91.67%, rgba(237, 233, 221, 0) 100%); }
+    #container #hero .slide > div {
+      max-width: 50%;
+      position: relative;
+      z-index: 1; }
+      #container #hero .slide > div #hero1-text {
+        width: 644px;
+        height: 446px; }
+      #container #hero .slide > div div {
+        margin-top: 22px;
+        text-align: center; }
+        #container #hero .slide > div div button {
+          font-size: 36px;
+          font-weight: 600;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); }
   #container #site-wide-deals {
     padding: 45px 69px; }
     #container #site-wide-deals ul {
@@ -286,7 +336,7 @@ body {
       width: auto;
       margin-top: 31px;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center; }
       #container #insta > ul li {
@@ -312,6 +362,7 @@ body {
       text-transform: uppercase; }
     #container #newsletter form {
       padding: 20px 24px;
+      align-self: center;
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
