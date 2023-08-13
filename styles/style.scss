@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
 
 $text-color: #000;
+$text-color-sale: #C1272D;
 
 body {
     background: #ccc;
@@ -26,6 +27,12 @@ body {
     button {cursor: pointer;}
 }
 
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
 .button-white {
     padding: 10px 20px;
     border: none;
@@ -46,6 +53,12 @@ body {
     text-transform: uppercase;
 }
 
+.splide__arrow {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+}
+
 #container {
     max-width: 1440px;
     margin: 0 auto;
@@ -57,6 +70,9 @@ body {
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 5;
         background: #fff;
 
         .left-nav {
@@ -90,6 +106,125 @@ body {
 
                 a {
                     display: inline-block;
+                }
+
+                &#cart-button {
+                    position: relative;
+                }
+
+                #cart-modal {
+                    width: auto;
+                    padding: 20px;
+                    display: none;
+                    position: absolute;
+                    top: 30px;
+                    right: -10px;
+                    z-index: 5;
+                    background: #fff;
+                    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.30);
+
+                    &>h1 {
+                        margin: 0 0 20px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+
+                    .cart-items {
+
+                        figure {
+                            padding-bottom: 20px;
+                            margin-bottom: 20px;
+                            border-bottom: 1px solid #ccc;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            align-items: flex-start;
+
+                            &:last-child {
+                                margin-bottom: 0px;
+                            }
+
+                            img {
+                                width: 75px;
+                                height: 100px;
+                                flex: 0 0 75px;
+                                margin-right: 20px;
+                                display: block;
+                                object-fit: cover;
+                            }
+
+                            figcaption {
+                                width: 150px;
+                                flex: 0 0 auto;
+                                text-transform: capitalize;
+
+                                strong {
+                                    padding: 10px 0 0;
+                                    display: block;
+                                    font-size: 12px;
+                                    text-transform: uppercase;
+                                }
+
+                                em {
+                                    padding: 10px 0 0;
+                                    display: block;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    text-transform: capitalize; 
+                                    
+                                    .discounted-price {
+                                        color: $text-color-sale;
+                                    }
+                                }
+
+                                &>div {
+                                    margin-top: 10px;
+                                    text-align: right;
+
+                                    .remove {
+                                        background: transparent;
+                                        color: $text-color-sale;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                                
+                            }
+
+                            &.discounted {
+                                em {
+
+                                    .discounted-price {
+                                        display: inline-block;
+                                    }
+                                    
+                                    .normal-price {
+                                        text-decoration: line-through;
+                                    }
+                                }
+                            }
+                        }
+
+                        .no-item {
+                            min-width: 250px;
+                            text-align: center;
+                        }
+                    }
+
+                    .cart-summary {
+                        padding: 20px 0;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+
+                        &>* {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .open-checkout {
+                        width: 100%;
+                    }
                 }
 
                 .currency {
@@ -241,7 +376,7 @@ body {
                     width: auto;
                 }
 
-                h1 {
+                h2 {
                     flex: 0 0 69px;
                     text-align: center;
                     font-size: 32px;
@@ -323,7 +458,7 @@ body {
             padding: 10px 20px 20px;
             font-size: 36px;
             font-weight: 800;
-            text-transform: uppercase;
+            text-transform: capitalize;
         }
 
         p {
@@ -343,9 +478,12 @@ body {
                 flex: 0 0 265px;
 
                 figure {
+                    width: 225px;
 
                     img {
-                        max-width: 100%;
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
                     }
 
                     figcaption {
@@ -432,19 +570,24 @@ body {
 
         ul.gallery {
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
 
             li {
                 padding: 20px;
                 
                 figure {
+                    width: 225px;
 
                     img {
-                        max-width: 100%;
+                        width: 100%;
+                        height: 300px;
+                        display: block;
+                        object-fit: cover;
                     }
 
                     figcaption {
                         min-height: 50px;
+                        max-width: 300px;
                         display: flex;
                         align-items: center;
                         font-size: 14px;
@@ -460,8 +603,13 @@ body {
                         .discounted-price {
                             width: 58px;
                             display: none;
-                            color: #C1272D;
+                            color: $text-color-sale;
                         }
+                    }
+
+                    &>div {
+                        margin-top: 20px;
+                        text-align: center;
                     }
 
                     &.discounted {
@@ -639,6 +787,169 @@ body {
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
+        }
+    }
+
+    #checkout-page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 10;
+        background: #0006;
+
+        &.hide {
+            display: none;
+        }
+
+        .checkout-modal {
+            width: 100%;
+            max-width: 1440px;
+            padding: 40px;
+            margin: 40px;
+            display: flex;
+            flex-flow: row wrap;
+            position: relative;
+            background: #fff;
+
+            h1 {
+                margin-bottom: 40px;
+                flex: 0 0 100%;
+                text-align: center;
+            }
+
+            .checkout-items {
+                margin-top: 20px;
+                flex: 1 1 auto;
+
+                li {
+                    figure {
+                        padding: 20px 0;
+                        border-bottom: 1px solid #ccc;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        img {
+                            width: 150px;
+                            height: 200px;
+                            flex: 0 0 150px;
+                            margin-right: 20px;
+                            display: block;
+                            object-fit: cover;
+                        }
+
+                        figcaption {
+                            width: 150px;
+                            flex: 1 0 auto;
+                            text-transform: capitalize;
+                        }
+
+                        em {
+                            font-weight: 600;
+                        }
+                        
+                        .qty {
+                            margin: 0 20px;
+                            flex: 0 0 150px;
+                        }
+    
+                        .price {
+                            flex: 0 0 150px;
+                            align-self: stretch;
+                            display: inline-flex;
+                            flex-flow: row wrap;
+                            justify-content: flex-end;
+                            text-align: right;
+
+                            .discounted-price {
+                                margin-left: 20px;
+                                display: none;
+                                color: $text-color-sale;
+                            }
+
+                            .remove {
+                                flex: 1 0 100%;
+                                align-self: self-end;
+                                background: transparent;
+                                color: $text-color-sale;
+                                text-align: right;
+                                text-transform: uppercase;
+                            }
+                            
+                        }
+
+                        &.discounted {
+
+                            .discounted-price {
+                                display: inline-block;
+                            }
+                            
+                            .normal-price {
+                                text-decoration: line-through;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .checkout-summary {
+                margin-left: 20px;
+                flex: 0 0 400px;
+
+                h2 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                .details {
+                    padding: 20px;
+                    margin: 20px 0;
+                    border: 1px solid #000;
+
+                    em {
+                        margin-bottom: 10px;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        &.total {
+                            padding-top: 10px;
+                            border-top: 1px solid #000;
+                            font-weight: 600;
+                        }
+                        
+                    }
+                }
+
+                .checkout-button {
+                    width: 100%;
+                }
+            }
+
+            #button-close-checkout {
+                padding: 5px 10px;
+                position: absolute;
+                right: 20px;
+                top: 50px;
+                background: transparent;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
         }
     }
 }

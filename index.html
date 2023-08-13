@@ -4,8 +4,9 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-        <title>My Website</title>
+        <title>Threaded</title>
         <link rel="stylesheet" href="styles/reset.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
         <link rel="stylesheet" href="styles/style.css"/>
         <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     </head>
@@ -37,8 +38,20 @@
                         <li>
                             <a href="#"><img src="./images/bx_bx-user.svg" alt="user"/></a>
                         </li>
-                        <li>
+                        <li id="cart-button">
                             <a href="#"><img src="./images/bx_bx-shopping-bag.svg" alt="shopping bag"/></a>
+                            <div id="cart-modal">
+                                <h1>shopping bag</h1>
+                                <div class="cart-items">Shopping bag is empty</div>
+                                <div class="cart-summary">
+                                    <em class="cart-quantity">Quantity:
+                                        <span>0</span>
+                                    </em>
+                                    <em class="cart-total">Total: $<span>0</span>
+                                    </em>
+                                </div>
+                                <button class="button-black open-checkout">checkout</button>
+                            </div>
                         </li>
                         <li>
                             <a href="#"><img src="./images/bx_bx-heart.svg" alt="heart"/></a>
@@ -74,42 +87,80 @@
                 </dsectioniv>
 
                 <section id="hero">
-                    <div class="slide">
-                        <img id="hero1-bg" src="./images/new-in-bg.jfif">
-                        <img id="hero1-model" src="./images/hero1-model.jfif">
-
-                        <div>
-                            <img id="hero1-text" src="./images/hero1.png">
-                            <div>
-                                <button class="button-white">shop now</button>
-                            </div>
+                    <section class="splide" aria-label="Splide Basic HTML Example">
+                        <div class="splide__arrows">
+                            <img src="./images/slider/slider-arrow-left.svg" class="splide__arrow splide__arrow--prev">
+                            <img src="./images/slider/slider-arrow-right.svg" class="splide__arrow splide__arrow--next">
                         </div>
-                    </div>
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div class="slide">
+                                        <img id="hero1-bg" src="./images/new-in-bg.jfif">
+                                        <img id="hero1-model" src="./images/hero1-model.jfif">
+
+                                        <div>
+                                            <img id="hero1-text" src="./images/hero1.png">
+                                            <div>
+                                                <button class="button-white">shop now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="slide">
+                                        <img id="hero1-bg" src="./images/new-in-bg.jfif">
+                                        <img id="hero1-model" src="./images/hero1-model.jfif">
+
+                                        <div>
+                                            <img id="hero1-text" src="./images/hero1.png">
+                                            <div>
+                                                <button class="button-white">shop now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="slide">
+                                        <img id="hero1-bg" src="./images/new-in-bg.jfif">
+                                        <img id="hero1-model" src="./images/hero1-model.jfif">
+
+                                        <div>
+                                            <img id="hero1-text" src="./images/hero1.png">
+                                            <div>
+                                                <button class="button-white">shop now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
                 </section>
 
                 <section id="site-wide-deals">
                     <ul>
                         <li>
-                            <h1>$5
-                            </h1>
+                            <h2>$5
+                            </h2>
                             <sub>off</sub>
                             <small>On orders above $50</small>
                         </li>
                         <li>
-                            <h1>$15
-                            </h1>
+                            <h2>$15
+                            </h2>
                             <sub>off</sub>
                             <small>On orders above $75</small>
                         </li>
                         <li>
-                            <h1>$20
-                            </h1>
+                            <h2>$20
+                            </h2>
                             <sub>off</sub>
                             <small>On orders above $150</small>
                         </li>
                         <li>
-                            <h1>$30
-                            </h1>
+                            <h2>$30
+                            </h2>
                             <sub>off</sub>
                             <small>On orders above $200</small>
                         </li>
@@ -133,49 +184,49 @@
                     <ul class="gallery">
                         <li>
                             <figure>
-                                <img src="./images/trending1.jfif" alt="">
+                                <img src="./images/trending/trending1.jfif" alt="">
                                 <figcaption>winter fasion</figcaption>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="./images/trending1.jfif" alt="">
+                                <img src="./images/trending/trending2.jfif" alt="">
                                 <figcaption>boots</figcaption>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="./images/trending1.jfif" alt="">
+                                <img src="./images/trending/trending3.jfif" alt="">
                                 <figcaption>night out</figcaption>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="./images/trending1.jfif" alt="">
+                                <img src="./images/trending/trending4.png" alt="">
                                 <figcaption>holidays</figcaption>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="./images/trending1.jfif" alt="">
+                                <img src="./images/trending/trending5.jfif" alt="">
                                 <figcaption>outerwear</figcaption>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="./images/trending1.jfif" alt="">
+                                <img src="./images/trending/trending6.jfif" alt="">
                                 <figcaption>white dresses</figcaption>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="./images/trending1.jfif" alt="">
+                                <img src="./images/trending/trending7.png" alt="">
                                 <figcaption>sweaters</figcaption>
                             </figure>
                         </li>
                         <li>
                             <figure>
-                                <img src="./images/trending1.jfif" alt="">
+                                <img src="./images/trending/trending8.png" alt="">
                                 <figcaption>party</figcaption>
                             </figure>
                         </li>
@@ -204,53 +255,68 @@
                     <h1>Recently Bought</h1>
                     <ul class="gallery">
                         <li>
-                            <figure>
-                                <img src="../images/recent1.jfif" alt="">
+                            <figure data-productid="101">
+                                <img src="../images/recently-bought/recent1.jfif" alt="">
                                 <figcaption>Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit</figcaption>
                                 <em>
                                     <span class="discounted-price"></span>
-                                    <span class="normal-price">$10</span>
+                                    <span class="normal-price">$38</span>
                                 </em>
+                                <div>
+                                    <button class="button-black buy-button">buy</button>
+                                </div>
                             </figure>
                         </li>
                         <li>
-                            <figure class="discounted">
-                                <img src="../images/recent1.jfif" alt="">
+                            <figure data-productid="102" class="discounted">
+                                <img src="../images/recently-bought/recent2.jfif" alt="">
                                 <figcaption>Chevron Flap Crossbody Bag</figcaption>
                                 <em>
                                     <span class="discounted-price">$5.77</span>
-                                    <span class="normal-price">$10</span>
+                                    <span class="normal-price">$7.34</span>
                                 </em>
+                                <div>
+                                    <button class="button-black buy-button">buy</button>
+                                </div>
                             </figure>
                         </li>
                         <li>
-                            <figure class="discounted">
-                                <img src="../images/recent1.jfif" alt="">
+                            <figure data-productid="103" class="discounted">
+                                <img src="../images/recently-bought/recent3.jfif" alt="">
                                 <figcaption>Manilla Tan Multi Plaid Oversized Fringe Scarf</figcaption>
                                 <em>
-                                    <span class="discounted-price">$5</span>
-                                    <span class="normal-price">$10</span>
+                                    <span class="discounted-price">$29</span>
+                                    <span class="normal-price">$39</span>
                                 </em>
+                                <div>
+                                    <button class="button-black buy-button">buy</button>
+                                </div>
                             </figure>
                         </li>
                         <li>
-                            <figure>
-                                <img src="../images/recent1.jfif" alt="">
+                            <figure data-productid="104">
+                                <img src="../images/recently-bought/recent4.jfif" alt="">
                                 <figcaption>Diamante Puff Sleeve Dress - Black</figcaption>
                                 <em>
-                                    <span class="discounted-price">$5</span>
-                                    <span class="normal-price">$10</span>
+                                    <span class="discounted-price"></span>
+                                    <span class="normal-price">$45.99</span>
                                 </em>
+                                <div>
+                                    <button class="button-black buy-button">buy</button>
+                                </div>
                             </figure>
                         </li>
                         <li>
-                            <figure class="discounted">
-                                <img src="../images/recent1.jfif" alt="">
+                            <figure data-productid="105" class="discounted">
+                                <img src="../images/recently-bought/recent5.jfif" alt="">
                                 <figcaption>Banneth Open Front Formal Dress in Black</figcaption>
                                 <em>
-                                    <span class="discounted-price">$5</span>
-                                    <span class="normal-price">$10</span>
+                                    <span class="discounted-price">$69</span>
+                                    <span class="normal-price">$99.95</span>
                                 </em>
+                                <div>
+                                    <button class="button-black buy-button">buy</button>
+                                </div>
                             </figure>
                         </li>
                     </ul>
@@ -260,11 +326,11 @@
                     <h1>your next inspo</h1>
                     <p>Checkout who’s wearing what by using #THREADEDInspo on Instagram</p>
                     <ul>
-                        <li><img src="./images/insta1.jfif" alt=""></li>
-                        <li><img src="./images/insta1.jfif" alt=""></li>
-                        <li><img src="./images/insta1.jfif" alt=""></li>
-                        <li><img src="./images/insta1.jfif" alt=""></li>
-                        <li><img src="./images/insta1.jfif" alt=""></li>
+                        <li><img src="./images/insta/insta1.jfif" alt=""></li>
+                        <li><img src="./images/insta/insta2.jfif" alt=""></li>
+                        <li><img src="./images/insta/insta3.jfif" alt=""></li>
+                        <li><img src="./images/insta/insta4.jfif" alt=""></li>
+                        <li><img src="./images/insta/insta5.jfif" alt=""></li>
                     </ul>
                     <div>
                         <button class="button-black">view all post</button>
@@ -327,10 +393,10 @@
                         <h1>we accept</h1>
                         <ul>
                             <li><a href="#"><img src="./images/payment/visa.png" alt=""></a></li>
-                            <li><a href="#"><img src="./images/payment/mastercard.png" alt="">></a></li>
-                            <li><a href="#"><img src="./images/payment/maestro.png" alt="">></a></li>
-                            <li><a href="#"><img src="./images/payment/american-express.png" alt="">></a></li>
-                            <li><a href="#"><img src="./images/payment/paypal.png" alt="">></a></li>
+                            <li><a href="#"><img src="./images/payment/mastercard.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/payment/maestro.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/payment/american-express.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/payment/paypal.png" alt=""></a></li>
                         </ul>
                     </div>
                 </div>
@@ -341,7 +407,31 @@
                     </a>
                 </div>
             </footer>
+
+            <section id="checkout-page" class="hide">
+                <div class="checkout-modal">
+                    <h1>Shopping Bag</h1>
+                    <ul class="checkout-items"></ul>
+                    <aside class="checkout-summary">
+                        <h2>Order Summary</h2>
+                        <div class="details">
+                            <em class="subtotal">Subtotal<span>0</span>
+                            </em>
+                            <em class="shipping">Shipping<span>0</span>
+                            </em>
+                            <em class="total">Estimated Total<span>0</span>
+                            </em>
+                        </div>
+                        <button class="button-black checkout-button">checkout</button>
+                    </aside>
+                    <button id="button-close-checkout">Close</button>
+                </div>
+            </section>
         </div>
-        <scriptsrc="index.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+
     </body>
 </html>
