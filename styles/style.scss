@@ -18,7 +18,32 @@ body {
         text-decoration: none !important;
     }
     
-    input, textarea, button {font-family: inherit}
+    input, textarea, button {
+        border: none;
+        font-family: inherit
+    }
+
+    button {cursor: pointer;}
+}
+
+.button-white {
+    padding: 10px 20px;
+    border: none;
+    background: #fff;
+    color: $text-color;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.button-black {
+    padding: 10px 20px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 #container {
@@ -221,36 +246,25 @@ body {
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-
-            button {
-                padding: 10px 20px;
-                border: none;
-                background: #fff;
-                color: $text-color;
-                font-size: 18px;
-                font-weight: 600;
-                text-transform: uppercase;
-            }
         }
     }
 
     #trending {
         padding: 40px 190px 62px;
         background: #fff;
+        text-align: center;
 
         h1 {
             padding: 10px 20px 20px;
             font-size: 36px;
             font-weight: 800;
             text-transform: uppercase;
-            text-align: center;
         }
 
         p {
             padding: 10px 20px 20px;
             font-size: 14px;
             font-weight: 400;
-            text-align: center;
         }
 
         ul.gallery {
@@ -336,16 +350,6 @@ body {
 
             div {
                 margin-top: 41px;
-
-                button {
-                    padding: 10px 20px;
-                    border: none;
-                    background: #fff;
-                    color: $text-color;
-                    font-size: 18px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                }
             }
         }
     }
@@ -387,9 +391,188 @@ body {
                         font-size: 14px;
                         font-weight: 600;
                         text-transform: capitalize;
+
+                        .discounted-price {
+                            width: 58px;
+                            display: none;
+                            color: #C1272D;
+                        }
+                    }
+
+                    &.discounted {
+                        
+                        em {
+
+                            .discounted-price {
+                                display: inline-block;
+                            }
+                            
+                            .normal-price {
+                                text-decoration: line-through;
+                            }
+                        }
                     }
                 }
             }
+        }
+    }
+
+    #insta {
+        padding: 40px 60px 60px;
+        background: #F2F2F2;
+        text-align: center;
+
+        h1 {
+            padding: 10px 20px 20px;
+            font-size: 36px;
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+
+        p {
+            padding: 10px 20px 20px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &>ul {
+            width: auto;
+            margin-top: 31px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            
+            li {
+                max-width: 225px;
+                height: 225px;
+                flex: 0 0 auto;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &>div {
+            padding-top: 31px;
+        }
+    }
+
+    #newsletter {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        background: #000;
+
+        h1 {
+            width: 826px;
+            color: #fff;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 75px;
+            text-transform: uppercase;
+        }
+
+        form {
+            padding: 20px 24px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: stretch;
+
+            input[type="text"] {
+                width: 319px;
+                padding: 9px 17px;
+                background: #F2F2F2;
+                border: none;
+            }
+
+            button {
+                width: 35px;
+                background: #fff;
+                text-align: center;
+
+                img {
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 60px 40px 70px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        background: #fff;
+
+        h1 {
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        #footer-links {
+            display: flex;
+            flex-flow: row nowrap;
+
+            .footer-list {
+                padding-right: 20px;
+
+                ul {
+                    li {
+                        padding: 10px;
+                        
+                        a {
+                            font-size: 12px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+
+        #social-payment {
+            margin-left: 110px;
+
+            .social-payment-list {
+
+                ul {
+                    margin: 5px 0 10px;
+                    padding-left: 5px;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                &#payment {
+
+                    ul {
+                        padding-left: 10px;
+
+                        img {
+                            display: inline-block;
+                            max-height: 25px;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+
+        #rights {
+            margin-top: 30px;
+            flex: 0 0 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }

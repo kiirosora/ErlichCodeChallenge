@@ -11,7 +11,28 @@ body {
     color: #000 !important;
     text-decoration: none !important; }
   body input, body textarea, body button {
+    border: none;
     font-family: inherit; }
+  body button {
+    cursor: pointer; }
+
+.button-white {
+  padding: 10px 20px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.button-black {
+  padding: 10px 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase; }
 
 #container {
   max-width: 1440px;
@@ -146,28 +167,19 @@ body {
       flex-flow: row nowrap;
       justify-content: center;
       align-items: center; }
-      #container #vip-exclusive > div button {
-        padding: 10px 20px;
-        border: none;
-        background: #fff;
-        color: #000;
-        font-size: 18px;
-        font-weight: 600;
-        text-transform: uppercase; }
   #container #trending {
     padding: 40px 190px 62px;
-    background: #fff; }
+    background: #fff;
+    text-align: center; }
     #container #trending h1 {
       padding: 10px 20px 20px;
       font-size: 36px;
       font-weight: 800;
-      text-transform: uppercase;
-      text-align: center; }
+      text-transform: uppercase; }
     #container #trending p {
       padding: 10px 20px 20px;
       font-size: 14px;
-      font-weight: 400;
-      text-align: center; }
+      font-weight: 400; }
     #container #trending ul.gallery {
       display: flex;
       flex-flow: row wrap;
@@ -223,14 +235,6 @@ body {
         font-weight: 600; }
       #container #new-in > div div {
         margin-top: 41px; }
-        #container #new-in > div div button {
-          padding: 10px 20px;
-          border: none;
-          background: #fff;
-          color: #000;
-          font-size: 18px;
-          font-weight: 600;
-          text-transform: uppercase; }
   #container #recently-bought {
     padding: 40px 40px 51px;
     background: #fff; }
@@ -257,3 +261,111 @@ body {
           font-size: 14px;
           font-weight: 600;
           text-transform: capitalize; }
+          #container #recently-bought ul.gallery li figure em .discounted-price {
+            width: 58px;
+            display: none;
+            color: #C1272D; }
+        #container #recently-bought ul.gallery li figure.discounted em .discounted-price {
+          display: inline-block; }
+        #container #recently-bought ul.gallery li figure.discounted em .normal-price {
+          text-decoration: line-through; }
+  #container #insta {
+    padding: 40px 60px 60px;
+    background: #F2F2F2;
+    text-align: center; }
+    #container #insta h1 {
+      padding: 10px 20px 20px;
+      font-size: 36px;
+      font-weight: 800;
+      text-transform: capitalize; }
+    #container #insta p {
+      padding: 10px 20px 20px;
+      font-size: 14px;
+      font-weight: 400; }
+    #container #insta > ul {
+      width: auto;
+      margin-top: 31px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center; }
+      #container #insta > ul li {
+        max-width: 225px;
+        height: 225px;
+        flex: 0 0 auto;
+        overflow: hidden; }
+        #container #insta > ul li img {
+          max-width: 100%; }
+    #container #insta > div {
+      padding-top: 31px; }
+  #container #newsletter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background: #000; }
+    #container #newsletter h1 {
+      width: 826px;
+      color: #fff;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 75px;
+      text-transform: uppercase; }
+    #container #newsletter form {
+      padding: 20px 24px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: stretch; }
+      #container #newsletter form input[type="text"] {
+        width: 319px;
+        padding: 9px 17px;
+        background: #F2F2F2;
+        border: none; }
+      #container #newsletter form button {
+        width: 35px;
+        background: #fff;
+        text-align: center; }
+  #container footer {
+    padding: 60px 40px 70px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    background: #fff; }
+    #container footer h1 {
+      padding: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: left;
+      text-transform: uppercase; }
+    #container footer #footer-links {
+      display: flex;
+      flex-flow: row nowrap; }
+      #container footer #footer-links .footer-list {
+        padding-right: 20px; }
+        #container footer #footer-links .footer-list ul li {
+          padding: 10px; }
+          #container footer #footer-links .footer-list ul li a {
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: capitalize; }
+    #container footer #social-payment {
+      margin-left: 110px; }
+      #container footer #social-payment .social-payment-list ul {
+        margin: 5px 0 10px;
+        padding-left: 5px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 10px; }
+      #container footer #social-payment .social-payment-list#payment ul {
+        padding-left: 10px; }
+        #container footer #social-payment .social-payment-list#payment ul img {
+          display: inline-block;
+          max-height: 25px; }
+    #container footer #rights {
+      margin-top: 30px;
+      flex: 0 0 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center; }
