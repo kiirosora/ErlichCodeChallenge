@@ -68,190 +68,196 @@ h1 {
         padding: 0 23px 0 24px;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         position: sticky;
         top: 0;
         z-index: 5;
         background: #fff;
 
-        .left-nav {
-            display: flex;
-            flex-flow: row nowrap;
+        nav {
+            flex: 1 0 auto;
 
-            li {
-                padding: 9px 15px;
+            .left-nav {
+                display: flex;
+                flex-flow: row nowrap;
 
-                a {
-                    text-transform: uppercase;
+                li {
+                    padding: 9px 15px;
 
-                    &:hover {
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
-
-        .right-nav {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-
-            li {
-                margin: 0 10px;
-
-                &:last-child {
-                    margin: 0 0 0 10px;
-                }
-
-                a {
-                    display: inline-block;
-                }
-
-                &#cart-button {
-                    position: relative;
-                }
-
-                #cart-modal {
-                    width: auto;
-                    padding: 20px;
-                    display: none;
-                    position: absolute;
-                    top: 30px;
-                    right: -10px;
-                    z-index: 5;
-                    background: #fff;
-                    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.30);
-
-                    &>h1 {
-                        margin: 0 0 20px;
-                        font-size: 18px;
-                        font-weight: 600;
+                    a {
                         text-transform: uppercase;
-                        text-align: center;
-                    }
 
-                    .cart-items {
-
-                        figure {
-                            padding-bottom: 20px;
-                            margin-bottom: 20px;
-                            border-bottom: 1px solid #ccc;
-                            display: flex;
-                            flex-flow: row nowrap;
-                            align-items: flex-start;
-
-                            &:last-child {
-                                margin-bottom: 0px;
-                            }
-
-                            img {
-                                width: 75px;
-                                height: 100px;
-                                flex: 0 0 75px;
-                                margin-right: 20px;
-                                display: block;
-                                object-fit: cover;
-                            }
-
-                            figcaption {
-                                width: 150px;
-                                flex: 0 0 auto;
-                                text-transform: capitalize;
-
-                                strong {
-                                    padding: 10px 0 0;
-                                    display: block;
-                                    font-size: 12px;
-                                    text-transform: uppercase;
-                                }
-
-                                em {
-                                    padding: 10px 0 0;
-                                    display: block;
-                                    font-size: 14px;
-                                    font-weight: 600;
-                                    text-transform: capitalize; 
-                                    
-                                    .discounted-price {
-                                        color: $text-color-sale;
-                                    }
-                                }
-
-                                &>div {
-                                    margin-top: 10px;
-                                    text-align: right;
-
-                                    .remove {
-                                        background: transparent;
-                                        color: $text-color-sale;
-                                        text-transform: uppercase;
-                                    }
-                                }
-                                
-                            }
-
-                            &.discounted {
-                                em {
-
-                                    .discounted-price {
-                                        display: inline-block;
-                                    }
-                                    
-                                    .normal-price {
-                                        text-decoration: line-through;
-                                    }
-                                }
-                            }
-                        }
-
-                        .no-item {
-                            min-width: 250px;
-                            text-align: center;
-                        }
-                    }
-
-                    .cart-summary {
-                        padding: 20px 0;
-                        display: flex;
-                        flex-flow: row nowrap;
-                        justify-content: space-between;
-
-                        &>* {
+                        &:hover {
                             font-weight: 600;
                         }
                     }
-
-                    .open-checkout {
-                        width: 100%;
-                    }
                 }
+            }
 
-                .currency {
-                    padding: 0px;
-                    margin: 17px 0 16px;
-                    border-radius: 35px;
-                    border: 1px solid #F2F2F2;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    background: #fff;
-                    cursor: pointer;
+            .right-nav {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-end;
+                align-items: center;
 
-                    .flag {
-                        margin: 5px 3px 5px 6px;
+                li {
+                    margin: 0 10px;
+
+                    &:last-child {
+                        margin: 0 0 0 10px;
                     }
 
-                    .currency-text {
-                        margin-right: 10px;
-                        text-transform: uppercase;
+                    a {
+                        display: inline-block;
                     }
 
-                    .arrow {
-                        margin-right: 12px;
+                    &#cart-button {
+                        position: relative;
+                    }
+
+                    #cart-modal {
+                        width: auto;
+                        padding: 20px;
+                        display: none;
+                        position: absolute;
+                        top: 30px;
+                        right: -10px;
+                        z-index: 5;
+                        background: #fff;
+                        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.30);
+
+                        &>h1 {
+                            margin: 0 0 20px;
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            text-align: center;
+                        }
+
+                        .cart-items {
+
+                            figure {
+                                padding-bottom: 20px;
+                                margin-bottom: 20px;
+                                border-bottom: 1px solid #ccc;
+                                display: flex;
+                                flex-flow: row nowrap;
+                                align-items: flex-start;
+
+                                &:last-child {
+                                    margin-bottom: 0px;
+                                }
+
+                                img {
+                                    width: 75px;
+                                    height: 100px;
+                                    flex: 0 0 75px;
+                                    margin-right: 20px;
+                                    display: block;
+                                    object-fit: cover;
+                                }
+
+                                figcaption {
+                                    width: 150px;
+                                    flex: 0 0 auto;
+                                    text-transform: capitalize;
+
+                                    strong {
+                                        padding: 10px 0 0;
+                                        display: block;
+                                        font-size: 12px;
+                                        text-transform: uppercase;
+                                    }
+
+                                    em {
+                                        padding: 10px 0 0;
+                                        display: block;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        text-transform: capitalize; 
+                                        
+                                        .discounted-price {
+                                            color: $text-color-sale;
+                                        }
+                                    }
+
+                                    &>div {
+                                        margin-top: 10px;
+                                        text-align: right;
+
+                                        .remove {
+                                            background: transparent;
+                                            color: $text-color-sale;
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                    
+                                }
+
+                                &.discounted {
+                                    em {
+
+                                        .discounted-price {
+                                            display: inline-block;
+                                        }
+                                        
+                                        .normal-price {
+                                            text-decoration: line-through;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .no-item {
+                                min-width: 250px;
+                                text-align: center;
+                            }
+                        }
+
+                        .cart-summary {
+                            padding: 20px 0;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+
+                            &>* {
+                                font-weight: 600;
+                            }
+                        }
+
+                        .open-checkout {
+                            width: 100%;
+                        }
+                    }
+
+                    .currency {
+                        padding: 0px;
+                        margin: 17px 0 16px;
+                        border-radius: 35px;
+                        border: 1px solid #F2F2F2;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        background: #fff;
+                        cursor: pointer;
+
+                        .flag {
+                            margin: 5px 3px 5px 6px;
+                        }
+
+                        .currency-text {
+                            margin-right: 10px;
+                            text-transform: uppercase;
+                        }
+
+                        .arrow {
+                            margin-right: 12px;
+                        }
                     }
                 }
             }
+
         }
     }
 

@@ -52,122 +52,125 @@ h1 {
     padding: 0 23px 0 24px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 5;
     background: #fff; }
-    #container header .left-nav {
-      display: flex;
-      flex-flow: row nowrap; }
-      #container header .left-nav li {
-        padding: 9px 15px; }
-        #container header .left-nav li a {
-          text-transform: uppercase; }
-          #container header .left-nav li a:hover {
-            font-weight: 600; }
-    #container header .right-nav {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center; }
-      #container header .right-nav li {
-        margin: 0 10px; }
-        #container header .right-nav li:last-child {
-          margin: 0 0 0 10px; }
-        #container header .right-nav li a {
-          display: inline-block; }
-        #container header .right-nav li#cart-button {
-          position: relative; }
-        #container header .right-nav li #cart-modal {
-          width: auto;
-          padding: 20px;
-          display: none;
-          position: absolute;
-          top: 30px;
-          right: -10px;
-          z-index: 5;
-          background: #fff;
-          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); }
-          #container header .right-nav li #cart-modal > h1 {
-            margin: 0 0 20px;
-            font-size: 18px;
-            font-weight: 600;
-            text-transform: uppercase;
-            text-align: center; }
-          #container header .right-nav li #cart-modal .cart-items figure {
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: flex-start; }
-            #container header .right-nav li #cart-modal .cart-items figure:last-child {
-              margin-bottom: 0px; }
-            #container header .right-nav li #cart-modal .cart-items figure img {
-              width: 75px;
-              height: 100px;
-              flex: 0 0 75px;
-              margin-right: 20px;
-              display: block;
-              object-fit: cover; }
-            #container header .right-nav li #cart-modal .cart-items figure figcaption {
-              width: 150px;
-              flex: 0 0 auto;
-              text-transform: capitalize; }
-              #container header .right-nav li #cart-modal .cart-items figure figcaption strong {
-                padding: 10px 0 0;
-                display: block;
-                font-size: 12px;
-                text-transform: uppercase; }
-              #container header .right-nav li #cart-modal .cart-items figure figcaption em {
-                padding: 10px 0 0;
-                display: block;
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: capitalize; }
-                #container header .right-nav li #cart-modal .cart-items figure figcaption em .discounted-price {
-                  color: #C1272D; }
-              #container header .right-nav li #cart-modal .cart-items figure figcaption > div {
-                margin-top: 10px;
-                text-align: right; }
-                #container header .right-nav li #cart-modal .cart-items figure figcaption > div .remove {
-                  background: transparent;
-                  color: #C1272D;
-                  text-transform: uppercase; }
-            #container header .right-nav li #cart-modal .cart-items figure.discounted em .discounted-price {
-              display: inline-block; }
-            #container header .right-nav li #cart-modal .cart-items figure.discounted em .normal-price {
-              text-decoration: line-through; }
-          #container header .right-nav li #cart-modal .cart-items .no-item {
-            min-width: 250px;
-            text-align: center; }
-          #container header .right-nav li #cart-modal .cart-summary {
-            padding: 20px 0;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between; }
-            #container header .right-nav li #cart-modal .cart-summary > * {
-              font-weight: 600; }
-          #container header .right-nav li #cart-modal .open-checkout {
-            width: 100%; }
-        #container header .right-nav li .currency {
-          padding: 0px;
-          margin: 17px 0 16px;
-          border-radius: 35px;
-          border: 1px solid #F2F2F2;
-          display: flex;
-          flex-flow: row nowrap;
-          align-items: center;
-          background: #fff;
-          cursor: pointer; }
-          #container header .right-nav li .currency .flag {
-            margin: 5px 3px 5px 6px; }
-          #container header .right-nav li .currency .currency-text {
-            margin-right: 10px;
+    #container header nav {
+      flex: 1 0 auto; }
+      #container header nav .left-nav {
+        display: flex;
+        flex-flow: row nowrap; }
+        #container header nav .left-nav li {
+          padding: 9px 15px; }
+          #container header nav .left-nav li a {
             text-transform: uppercase; }
-          #container header .right-nav li .currency .arrow {
-            margin-right: 12px; }
+            #container header nav .left-nav li a:hover {
+              font-weight: 600; }
+      #container header nav .right-nav {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center; }
+        #container header nav .right-nav li {
+          margin: 0 10px; }
+          #container header nav .right-nav li:last-child {
+            margin: 0 0 0 10px; }
+          #container header nav .right-nav li a {
+            display: inline-block; }
+          #container header nav .right-nav li#cart-button {
+            position: relative; }
+          #container header nav .right-nav li #cart-modal {
+            width: auto;
+            padding: 20px;
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: -10px;
+            z-index: 5;
+            background: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); }
+            #container header nav .right-nav li #cart-modal > h1 {
+              margin: 0 0 20px;
+              font-size: 18px;
+              font-weight: 600;
+              text-transform: uppercase;
+              text-align: center; }
+            #container header nav .right-nav li #cart-modal .cart-items figure {
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+              border-bottom: 1px solid #ccc;
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: flex-start; }
+              #container header nav .right-nav li #cart-modal .cart-items figure:last-child {
+                margin-bottom: 0px; }
+              #container header nav .right-nav li #cart-modal .cart-items figure img {
+                width: 75px;
+                height: 100px;
+                flex: 0 0 75px;
+                margin-right: 20px;
+                display: block;
+                object-fit: cover; }
+              #container header nav .right-nav li #cart-modal .cart-items figure figcaption {
+                width: 150px;
+                flex: 0 0 auto;
+                text-transform: capitalize; }
+                #container header nav .right-nav li #cart-modal .cart-items figure figcaption strong {
+                  padding: 10px 0 0;
+                  display: block;
+                  font-size: 12px;
+                  text-transform: uppercase; }
+                #container header nav .right-nav li #cart-modal .cart-items figure figcaption em {
+                  padding: 10px 0 0;
+                  display: block;
+                  font-size: 14px;
+                  font-weight: 600;
+                  text-transform: capitalize; }
+                  #container header nav .right-nav li #cart-modal .cart-items figure figcaption em .discounted-price {
+                    color: #C1272D; }
+                #container header nav .right-nav li #cart-modal .cart-items figure figcaption > div {
+                  margin-top: 10px;
+                  text-align: right; }
+                  #container header nav .right-nav li #cart-modal .cart-items figure figcaption > div .remove {
+                    background: transparent;
+                    color: #C1272D;
+                    text-transform: uppercase; }
+              #container header nav .right-nav li #cart-modal .cart-items figure.discounted em .discounted-price {
+                display: inline-block; }
+              #container header nav .right-nav li #cart-modal .cart-items figure.discounted em .normal-price {
+                text-decoration: line-through; }
+            #container header nav .right-nav li #cart-modal .cart-items .no-item {
+              min-width: 250px;
+              text-align: center; }
+            #container header nav .right-nav li #cart-modal .cart-summary {
+              padding: 20px 0;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between; }
+              #container header nav .right-nav li #cart-modal .cart-summary > * {
+                font-weight: 600; }
+            #container header nav .right-nav li #cart-modal .open-checkout {
+              width: 100%; }
+          #container header nav .right-nav li .currency {
+            padding: 0px;
+            margin: 17px 0 16px;
+            border-radius: 35px;
+            border: 1px solid #F2F2F2;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            background: #fff;
+            cursor: pointer; }
+            #container header nav .right-nav li .currency .flag {
+              margin: 5px 3px 5px 6px; }
+            #container header nav .right-nav li .currency .currency-text {
+              margin-right: 10px;
+              text-transform: uppercase; }
+            #container header nav .right-nav li .currency .arrow {
+              margin-right: 12px; }
   #container #benefits {
     background: #F2F2F2; }
     #container #benefits nav {
